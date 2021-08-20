@@ -59,7 +59,7 @@ function prices(){
 document.getElementById('apply-button').addEventListener('click', function(){
     let promoInput = document.getElementById('promo-input');
     let promoInputValue = promoInput.value;
-    const promoStockValue = 'ttt'
+    const promoStockValue = 'stevekaku'
     let allTotal = document.getElementById('all-total');
     let allTotalValue = parseFloat(allTotal.innerText);
     if (promoInputValue == promoStockValue){
