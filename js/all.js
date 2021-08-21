@@ -1,37 +1,41 @@
-// Items And Price part
-function itemAndprice(input){
+// Items part
+function item(input){
+    if (input == '8GB'){
+        document.getElementById('memory-cost').innerText = 0;
+    }
+    else if (input == '16GB'){
+        document.getElementById('memory-cost').innerText = 180;
+    }
+    else if (input == '256GB'){
+        document.getElementById('storage-cost').innerText = 0;
+    }
+    else if (input == '512GB'){
+        document.getElementById('storage-cost').innerText = 100;
+    }
+    else if (input == '1TB'){
+        document.getElementById('storage-cost').innerText = 180;
+    }
+    else if (input == 'free'){
+        document.getElementById('delivery-charge').innerText = 0;
+    }
+    else if (input == 'cost'){
+        document.getElementById('delivery-charge').innerText = 20;
+    }
+    document.getElementById('promo-input').disabled = false;
+    price()
+}
+// price part
+function price(){
     const bestPrice = document.getElementById('best-price');
     const memoryCost = document.getElementById('memory-cost');
     const storageCost = document.getElementById('storage-cost');
     const deliveryCharge = document.getElementById('delivery-charge');
-    if (input == '8GB'){
-        memoryCost.innerText = 0;
-    }
-    else if (input == '16GB'){
-        memoryCost.innerText = 180;
-    }
-    else if (input == '256GB'){
-        storageCost.innerText = 0;
-    }
-    else if (input == '512GB'){
-        storageCost.innerText = 100;
-    }
-    else if (input == '1TB'){
-        storageCost.innerText = 180;
-    }
-    else if (input == 'free'){
-        deliveryCharge.innerText = 0;
-    }
-    else if (input == 'cost'){
-        deliveryCharge.innerText = 20;
-    }
     const newTotalPrice = parseFloat(bestPrice.innerText)+parseFloat(memoryCost.innerText)+parseFloat(storageCost.innerText)  +parseFloat(deliveryCharge.innerText);
     document.getElementById('total-price').innerText = newTotalPrice;
     document.getElementById('all-total').innerText = newTotalPrice;
-    document.getElementById('promo-input').disabled = false;
 }
 // Promo part
-function promo(){
+document.getElementById('promo-apply').addEventListener('click', function(){
     const promoInput = document.getElementById('promo-input');
     const promoInputValue = promoInput.value;
     const allTotal = document.getElementById('all-total');
@@ -45,4 +49,4 @@ function promo(){
     else {
         promoInput.value = '';
     }
-}
+})
