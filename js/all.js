@@ -1,70 +1,50 @@
-// Memory part
-function memory(input){
-    let memoryCost = document.getElementById('memory-cost');
-    if (input == 1){
-        memoryCost.innerText = 0;
+// Calculation part
+function calculate(input){
+    if (input == '8GB'){
+        document.getElementById('memory-cost').innerText = 0;
     }
-    else if (input == 2){
-        memoryCost.innerText = 180;
+    else if (input == '16GB'){
+        document.getElementById('memory-cost').innerText = 180;
     }
-    document.getElementById('promo-input').disabled = false;
+    else if (input == '256GB'){
+        document.getElementById('storage-cost').innerText = 0;
+    }
+    else if (input == '512GB'){
+        document.getElementById('storage-cost').innerText = 100;
+    }
+    else if (input == '1TB'){
+        document.getElementById('storage-cost').innerText = 180;
+    }
+    else if (input == 'free'){
+        document.getElementById('delivery-charge').innerText = 0;
+    }
+    else if (input == 'cost'){
+        document.getElementById('delivery-charge').innerText = 20;
+    }
     prices();
-}
-// Storage part
-function storage(input){
-    let storageCost = document.getElementById('storage-cost');
-    if (input == 1){
-        storageCost.innerText = 0;
-    }
-    else if (input == 2){
-        storageCost.innerText = 100;
-    }
-    else if (input == 3){
-        storageCost.innerText = 180;
-    }
     document.getElementById('promo-input').disabled = false;
-    prices()
-}
-// Delivery part
-function delivery(input){
-    let deliveryCharge = document.getElementById('delivery-charge');
-    if (input == 1){
-        deliveryCharge.innerText = 0;
-    }
-    else if (input == 2){
-        deliveryCharge.innerText = 20;
-    }
-    document.getElementById('promo-input').disabled = false;
-    prices()
 }
 // price part
 function prices(){
-    let bestPrice = document.getElementById('best-price');
-    let bestPriceAmount = parseFloat(bestPrice.innerText);
-    let memoryCost = document.getElementById('memory-cost');
-    let memoryCostAmount = parseFloat(memoryCost.innerText);
-    let storageCost = document.getElementById('storage-cost');
-    let storageCostAmount = parseFloat(storageCost.innerText);
-    let deliveryCharge = document.getElementById('delivery-charge');
-    let deliveryChargeAmount = parseFloat(deliveryCharge.innerText);
+    const bestPrice = document.getElementById('best-price');
+    const memoryCost = document.getElementById('memory-cost');
+    const storageCost = document.getElementById('storage-cost');
+    const deliveryCharge = document.getElementById('delivery-charge');
 
-    let totalPrice = document.getElementById('total-price');
-    let allTotal = document.getElementById('all-total');
-
-    let newTotalPrice = bestPriceAmount+memoryCostAmount+storageCostAmount+deliveryChargeAmount;
-    totalPrice.innerText = newTotalPrice;
-    allTotal.innerText = newTotalPrice;
+    const newTotalPrice = parseFloat(bestPrice.innerText)+parseFloat(memoryCost.innerText)+parseFloat(storageCost.innerText)  +parseFloat(deliveryCharge.innerText);
+    document.getElementById('total-price').innerText = newTotalPrice;
+    document.getElementById('all-total').innerText = newTotalPrice;
 }
 // Promo part
 document.getElementById('apply-button').addEventListener('click', function(){
-    let promoInput = document.getElementById('promo-input');
-    let promoInputValue = promoInput.value;
+    const promoInput = document.getElementById('promo-input');
+    const promoInputValue = promoInput.value;
     const promoStockValue = 'stevekaku'
-    let allTotal = document.getElementById('all-total');
-    let allTotalValue = parseFloat(allTotal.innerText);
+    const allTotal = document.getElementById('all-total');
+    const allTotalValue = parseFloat(allTotal.innerText);
     if (promoInputValue == promoStockValue){
-        let final = (allTotalValue*20)/100;
-        allTotal.innerText = allTotalValue-final;
+        const discount = (allTotalValue*20)/100;
+        allTotal.innerText = allTotalValue-discount;
         promoInput.value = '';
         promoInput.disabled = true;
     }

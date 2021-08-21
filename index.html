@@ -24,44 +24,44 @@
                 <!-- Memory part -->
             <div class="mt-5">
                 <h4 class="text-lg font-medium mb-1">Memory</h4>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="memory(1)">8GB unified memory</button>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="memory(2)">16GB unified memory</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="calculate('8GB')">8GB unified memory</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="calculate('16GB')">16GB unified memory</button>
             </div>
                 <!-- Storage part -->
             <div class="mt-5">
                 <h4 class="text-lg font-medium mb-1">Storage</h4>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="storage(1)">256GB SSD storage</button>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="storage(2)">512GB SSD storage</button>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="storage(3)">1TB SSD storage</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="calculate('256GB')">256GB SSD storage</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="calculate('512GB')">512GB SSD storage</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="calculate('1TB')">1TB SSD storage</button>
             </div>
                 <!-- Delivery option part -->
             <div class="mt-5">
                 <h4 class="text-lg font-medium mb-1">Chose your delivery option</h4>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="delivery(1)">Friday, Aug 25 FREE Prime Delivery</button>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="delivery(2)">Friday, Aug 21 Delivery charge $20</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="calculate('free')">Friday, Aug 25 FREE Prime Delivery</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="calculate('cost')">Friday, Aug 21 Delivery charge $20</button>
             </div>
                 <!-- Price part -->
             <div class="mt-5">
                 <table>
                     <tbody class="text-lg font-medium">
                         <tr class="border-b">
-                            <td class="pr-20">Best Price</td>
+                            <td class="pr-44">Best Price</td>
                             <td>$<span id="best-price">1299</span></td>
                         </tr>
                         <tr class="border-b">
-                            <td class="pr-20">Extra memory cost</td>
+                            <td class="pr-44">Extra memory cost</td>
                             <td>$<span id="memory-cost">0</span></td>
                         </tr>
                         <tr class="border-b">
-                            <td class="pr-20">Extra storage Cost</td>
+                            <td class="pr-44">Extra storage Cost</td>
                             <td>$<span id="storage-cost">0</span></td>
                         </tr>
                         <tr class="border-b border-black">
-                            <td class="pr-20">Delivery charge</td>
+                            <td class="pr-44">Delivery charge</td>
                             <td>$<span id="delivery-charge">0</span></td>
                         </tr>
                         <tr class="border-b">
-                            <td class="pr-20">Total Price</td>
+                            <td class="pr-44">Total Price</td>
                             <td>$<span id="total-price">1299</span></td>
                         </tr>
                     </tbody>
