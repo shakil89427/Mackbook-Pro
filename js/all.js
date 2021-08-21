@@ -1,5 +1,5 @@
-// Calculation part
-function calculate(input){
+// Items part
+function item(input){
     if (input == '8GB'){
         document.getElementById('memory-cost').innerText = 0;
     }
