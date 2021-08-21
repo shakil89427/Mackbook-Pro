@@ -24,21 +24,21 @@
                 <!-- Memory part -->
             <div class="mt-5">
                 <h4 class="text-lg font-medium mb-1">Memory</h4>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="item('8GB')">8GB unified memory</button>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="item('16GB')">16GB unified memory</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="itemAndprice('8GB')">8GB unified memory</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="itemAndprice('16GB')">16GB unified memory</button>
             </div>
                 <!-- Storage part -->
             <div class="mt-5">
                 <h4 class="text-lg font-medium mb-1">Storage</h4>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="item('256GB')">256GB SSD storage</button>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="item('512GB')">512GB SSD storage</button>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="item('1TB')">1TB SSD storage</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="itemAndprice('256GB')">256GB SSD storage</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="itemAndprice('512GB')">512GB SSD storage</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="itemAndprice('1TB')">1TB SSD storage</button>
             </div>
                 <!-- Delivery option part -->
             <div class="mt-5">
                 <h4 class="text-lg font-medium mb-1">Chose your delivery option</h4>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="item('free')">Friday, Aug 25 FREE Prime Delivery</button>
-                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="item('cost')">Friday, Aug 21 Delivery charge $20</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="itemAndprice('free')">Friday, Aug 25 FREE Prime Delivery</button>
+                <button class="bg-gray-200 rounded border border-gray-900 px-1" onclick="itemAndprice('cost')">Friday, Aug 21 Delivery charge $20</button>
             </div>
                 <!-- Price part -->
             <div class="mt-5">
@@ -71,7 +71,7 @@
             <div class="">
                 <h3 class="text-lg font-medium mt-2">Add Promo code</h3>
                 <input id="promo-input" class="border border-black text-center rounded" type="text">
-                <button id="apply-button" class="bg-red-500 text-white px-3 py-1 rounded">Apply</button>
+                <button class="bg-red-500 text-white px-3 py-1 rounded" onclick="promo()">Apply</button>
             </div>
         </div>
     </section>
